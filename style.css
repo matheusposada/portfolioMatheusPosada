@@ -1,0 +1,438 @@
+/* ========================= */
+/* VARIÁVEIS DE CORES */
+/* ========================= */
+
+/* :root define variáveis globais que podem ser usadas em todo o CSS */
+:root {
+  --bg: linear-gradient(135deg, #060422, #212235c);
+  /* Gradiente de fundo principal */
+
+  --card: #0f172a;
+  /* Cor padrão dos cards */
+
+  --text: #f8fafc;
+  /* Cor principal dos textos */
+
+  --primary: #3b82f6;
+  /* Cor principal (botões, destaques, hover) */
+
+  --secondary: #64748b;
+  /* Cor secundária (apoio visual) */
+}
+
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+/* Remove margens e espaçamentos padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Inclui padding e borda no cálculo do tamanho */
+}
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Fonte principal */
+
+  background: var(--bg);
+  /* Aplica o gradiente definido nas variáveis */
+
+  color: #f8fafc;
+  /* Cor do texto */
+
+  line-height: 1.6;
+  /* Altura das linhas (melhora leitura) */
+
+  scroll-behavior: smooth;
+  /* Scroll suave ao navegar */
+}
+
+/* Fundo com efeito de estrelas */
+body {
+  background-color: #160e3a;
+  /* Cor base do fundo */
+
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.8) 1px, transparent 0),
+    radial-gradient(1px 1px at 25% 40%, rgba(255, 255, 255, 0.6) 1px, transparent 0),
+    radial-gradient(1px 1px at 40% 15%, rgba(255, 255, 255, 0.5) 1px, transparent 0),
+    radial-gradient(1px 1px at 55% 70%, rgba(255, 255, 255, 0.7) 1px, transparent 0),
+    radial-gradient(1px 1px at 65% 50%, rgba(255, 255, 255, 0.6) 1px, transparent 0),
+    radial-gradient(1px 1px at 75% 30%, rgba(255, 255, 255, 0.5) 1px, transparent 0),
+    radial-gradient(1px 1px at 85% 80%, rgba(255, 255, 255, 0.4) 1px, transparent 0),
+    radial-gradient(1px 1px at 5% 60%, rgba(255, 255, 255, 0.7) 1px, transparent 0),
+    radial-gradient(1px 1px at 50% 90%, rgba(255, 255, 255, 0.6) 1px, transparent 0);
+  /* Cria pequenos pontos simulando estrelas */
+
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/* ========================= */
+/* MENU LATERAL FIXO */
+/* ========================= */
+
+.menu-lateral {
+  position: fixed;
+  /* Fica fixo na tela */
+
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  /* Centraliza verticalmente */
+
+  z-index: 1000;
+  /* Fica acima dos outros elementos */
+}
+
+.menu-lateral ul {
+  list-style: none;
+  /* Remove bolinhas da lista */
+}
+
+.menu-lateral ul li {
+  margin: 10px 0;
+}
+
+.menu-lateral ul li a {
+  color: #f8fafc;
+  font-size: 24px;
+  display: block;
+  padding: 8px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.menu-lateral ul li a:hover {
+  transform: scale(1.2);
+  /* Aumenta levemente o ícone */
+
+  color: var(--primary);
+  /* Muda a cor no hover */
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+
+header {
+  min-height: 100vh;
+
+  /* Ocupa toda a altura da tela */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.btn-header {
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-header:hover {
+  transform: scale(1.05);
+  /* Leve zoom */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Foto do header */
+.foto-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* Foto redonda */
+
+  object-fit: cover;
+  /* Evita distorção */
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.foto-header img:hover {
+  transform: scale(2.05);
+  /* Zoom exagerado para destaque */
+}
+
+/* ========================= */
+/* CARDS DA PÁGINA INICIAL */
+/* ========================= */
+
+.cards-inicio {
+  display: flex;
+  gap: 24px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards-inicio .card {
+  background: var(--card);
+  padding: 20px 30px;
+  border-radius: 16px;
+  cursor: pointer;
+
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-align: center;
+  min-width: 150px;
+}
+
+.cards-inicio .card i {
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cards-inicio .card:hover {
+  transform: translateY(-10px);
+  /* Sobe o card */
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================= */
+/* SEÇÕES */
+/* ========================= */
+
+section {
+  min-height: 100vh;
+  /* Cada seção ocupa a tela inteira */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  text-align: center;
+}
+
+/* ========================= */
+/* SOBRE MIM */
+/* ========================= */
+
+.sobre-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 30px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.sobre-card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.sobre-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.tecnologias span {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 6px;
+  font-size: 14px;
+}
+
+/* ========================= */
+/* PROJETOS */
+/* ========================= */
+
+#projetos h2 {
+  margin-bottom: 40px;
+}
+
+/* Card individual */
+#projetos .card {
+  background: #1e293b;
+  color: #f8fafc;
+  border-radius: 16px;
+  padding: 20px;
+
+  width: 300px;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projetos .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Container dos cards */
+#projetos .cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Ícone GitHub */
+#projetos .card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+}
+
+#projetos .card a:hover {
+  color: var(--primary);
+}
+
+/* ========================= */
+/* CONTATO */
+/* ========================= */
+
+.contatos {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.contato-icon {
+  font-size: 32px;
+  color: #f8fafc;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contato-icon:hover {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+.email-card {
+  font-size: 32px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  width: 50px;
+}
+
+.email-text {
+  display: none;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* ========================= */
+/* BOTÕES DE SCROLL */
+/* ========================= */
+
+.scroll-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  z-index: 1000;
+}
+
+#scroll-top,
+#scroll-next {
+  padding: 10px 12px;
+  font-size: 20px;
+
+  border: none;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#scroll-top:hover,
+#scroll-next:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================= */
+/* FADE SLIDE */
+/* ========================= */
+
+.fade-slide {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 400px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .cards-inicio {
+    flex-direction: column;
+  }
+}
+
+/* Ajustes gerais */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
