@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus Posada | Portfólio</title>
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- MENU LATERAL FIXO -->
+    <!-- ========================= -->
+    <nav class="menu-lateral">
+        <ul>
+            <li><a href="#home" class="menu-link"><i class="bi bi-house"></i></a></li>
+            <li><a href="#sobre" class="menu-link"><i class="bi bi-person"></i></a></li>
+            <li><a href="#projetos" class="menu-link"><i class="bi bi-code-slash"></i></a></li>
+            <li><a href="#contato" class="menu-link"><i class="bi bi-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- ========================= -->
+    <!-- HEADER / PÁGINA INICIAL -->
+    <!-- ========================= -->
+    <header id="home">
+        <div class="header-content">
+            <div class="intro-text">
+                <h1>Matheus Posada</h1>
+                <p>Desenvolvedor | Portfólio de Projetos</p>
+                <a href="cvMatheusPosada.pdf" download class="btn-header">Curriculum Vitae</a>
+            </div>
+
+            <div class="foto-header">
+                <img src="imagens/matheus.jpg.jpg" alt="Foto de Matheus Posada">
+            </div>
+        </div>
+
+        <div class="cards-inicio">
+            <div class="card" onclick="scrollToSection('sobre')">
+                <i class="bi bi-person"></i>
+                <h3>Sobre mim</h3>
+            </div>
+            <div class="card" onclick="scrollToSection('projetos')">
+                <i class="bi bi-code-slash"></i>
+                <h3>Projetos</h3>
+            </div>
+            <div class="card" onclick="scrollToSection('contato')">
+                <i class="bi bi-envelope"></i>
+                <h3>Contato</h3>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================= -->
+    <!-- SOBRE MIM -->
+    <!-- ========================= -->
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <div class="sobre-card">
+            <i class="bi bi-person"></i>
+            <p>Sou um profissional com experiência nas áreas administrativa, financeira e gastronômica. Atuei no RH e no
+                faturamento de hospital, gerenciei um restaurante como sous-chef e, atualmente, trabalho no financeiro
+                de um laboratório farmacêutico.</p>
+            <p>Cursei História na Universidade Estadual de Londrina e, atualmente, curso Análise e Desenvolvimento de
+                Sistemas no Instituto Federal de Santa Catarina. Desenvolvo projetos utilizando Java, JavaScript, HTML e
+                CSS, e sou apaixonado por aprender na prática e criar soluções funcionais e eficientes.</p>
+
+            <div class="tecnologias">
+                <span>Java</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- PROJETOS -->
+    <!-- ========================= -->
+    <section id="projetos">
+        <h2>Projetos</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Batalha Naval</h3>
+                <p>Jogo desenvolvido em Java com interface de console.</p>
+                <a href="https://github.com/matheusposada/batalhaNaval" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Robocode</h3>
+                <p>Projeto de robôs em Java utilizando a plataforma Robocode.</p>
+                <a href="https://github.com/matheusposada/robocode" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>Website Raíz Didática</h3>
+                <p>Salespage de materiais didáticas de matemática.</p>
+                <a href="https://github.com/matheusposada/raizDidatica" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- CONTATO -->
+    <!-- ========================= -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contatos">
+            <a href="https://wa.me/5548988473924" target="_blank" class="contato-icon">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/matheusposada" target="_blank" class="contato-icon">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/matheusposada" target="_blank" class="contato-icon">
+                <i class="bi bi-github"></i>
+            </a>
+        </div>
+        <div class="email-card" id="email-card" onclick="toggleEmail()">
+            <i class="bi bi-envelope"></i>
+        </div>
+        <div class="email-text" id="email-text">matheusposada@gmail.com</div>
+    </section>
+
+    <!-- ========================= -->
+    <!-- BOTÃO PRÓXIMA SESSÃO E VOLTAR AO TOPO -->
+    <!-- ========================= -->
+
+    <div class="scroll-buttons">
+        <button id="scroll-top"><i class="bi bi-arrow-up"></i></button>
+        <button id="scroll-next"><i class="bi bi-arrow-down"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
