@@ -3,6 +3,7 @@
 @theme {
   --color-night: #0b0f1f;     /* céu da noite */
   --color-dusk: #261b4d;      /* horizonte roxo */
+  --color-forest-far: #181b3d; /* pinheiros ao fundo, um tom acima do céu */
   --color-gold: #f0c060;      /* lua e destaques */
   --color-gold-ink: #b8860b;  /* dourado escuro, legível sobre fundo claro */
   --color-paper: #fafaf7;     /* seções claras */
