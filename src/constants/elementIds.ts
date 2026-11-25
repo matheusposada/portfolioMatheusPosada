@@ -1,0 +1,1 @@
+export const MENU_ELEMENT_ID = 'main-menu'
