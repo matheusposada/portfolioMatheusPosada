@@ -1,3 +1,5 @@
+import { SECTION_IDS } from '../constants/sectionIds'
+
 export interface NavItem {
   id: string
   label: string
@@ -42,10 +44,10 @@ export interface ContactInfo {
 }
 
 export const navItems: NavItem[] = [
-  { id: 'home', label: 'Início' },
-  { id: 'about', label: 'Sobre' },
-  { id: 'projects', label: 'Projetos' },
-  { id: 'contact', label: 'Contato' },
+  { id: SECTION_IDS.home, label: 'Início' },
+  { id: SECTION_IDS.about, label: 'Sobre' },
+  { id: SECTION_IDS.projects, label: 'Projetos' },
+  { id: SECTION_IDS.contact, label: 'Contato' },
 ]
 
 export const stats: Stat[] = [

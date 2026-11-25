@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import { BsDownload } from 'react-icons/bs'
 import { contactInfo } from '../data/portfolio'
 import ButtonLink from './ButtonLink'
+import { SECTION_IDS } from '../constants/sectionIds'
 
 const PROFILE_PHOTO_SRC = '/imagens/matheus.webp'
 
@@ -24,7 +25,7 @@ export default function HeroContent(): ReactElement {
         Desenvolvimento Web &amp; Análise de Dados
       </p>
       <div className="flex flex-wrap justify-center gap-3.5">
-        <ButtonLink href="#projects" variant="outline">
+        <ButtonLink href={`#${SECTION_IDS.projects}`} variant="outline">
           meus projetos
         </ButtonLink>
         <ButtonLink href={contactInfo.resumePath} variant="solid" isDownload>
