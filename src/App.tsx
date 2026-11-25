@@ -1,7 +1,9 @@
 import { useCallback, useState, type ReactElement } from 'react'
+import About from './components/About'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
 import Navbar from './components/Navbar'
+import { SECTION_IDS } from './constants/sectionIds'
 import { navItems } from './data/portfolio'
 import { useScrollY } from './hooks/useScrollY'
 
@@ -15,7 +17,9 @@ export default function App(): ReactElement {
   const toggleMenu = useCallback((): void => setIsMenuOpen((isOpen) => !isOpen), [])
 
   const isNavbarSolid = scrollY > window.innerHeight - NAVBAR_SOLID_OFFSET_PX
-  const pendingSections = navItems.filter(({ id }) => id !== 'home')
+  const pendingSections = navItems.filter(
+    ({ id }) => id !== SECTION_IDS.home && id !== SECTION_IDS.about,
+  )
 
   return (
     <>
@@ -23,6 +27,7 @@ export default function App(): ReactElement {
       <Navbar isMenuOpen={isMenuOpen} isSolid={isNavbarSolid} onMenuToggle={toggleMenu} />
       <Hero scrollY={scrollY} />
       <main>
+        <About />
         {pendingSections.map(({ id, label }) => (
           <section key={id} id={id} className="grid h-screen place-items-center bg-paper text-ink odd:bg-night odd:text-white">
             {label}
