@@ -1,12 +1,15 @@
+import { projects } from './data/portfolio'
+
 export default function App() {
   return (
-    <main className="grid min-h-screen place-items-center bg-gradient-to-b from-night to-dusk">
-      <div className="text-center">
-        <div className="bg-moon mx-auto mb-6 h-24 w-24 rounded-full" />
-        <h1 className="font-display text-5xl text-white italic">
-          Matheus <span className="text-gold">Posada</span>
-        </h1>
-      </div>
+    <main className="min-h-screen bg-night p-10 text-white">
+      <ul className="space-y-2">
+        {projects.map((project) => (
+          <li key={project.title}>
+            <span className="text-gold">{project.tag}</span> · {project.title}
+          </li>
+        ))}
+      </ul>
     </main>
   )
 }
